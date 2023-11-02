@@ -8,33 +8,62 @@
 <body>
     <form id="form-choose">
         <!-- select elements -->
-        <select name="" id="categories" value="">
-            <option value="select-one">Select One</option>
-        </select>
-        <br>
-        <br>
-        <select name="" id="activities" value="">
-            <option value="select-one">Select One</option>
-        </select>
+
+            <!-- categories select element -->
+            <select name="" id="categories" value="">
+                <!-- default option: select one -->
+                <option value="select-one" id="defaultOne">Select One</option>
+                <!-- END OF: default option: select one -->
+            </select>
+            <br>
+            <br>
+            <!-- END OF: categories select element -->
+
+            <!-- activities select element -->
+            <select name="" id="activities" value="">
+                <!-- default option: select one -->
+                <option value="select-one" id="defaultTwo">Select One</option>
+                <!-- END OF: default option: select one -->
+            </select>
+            <br/>
+            <br/>
+            <!-- END OF: activities select element -->
         <!-- END OF: select elements -->
-        <br/>
-        <br/>
+        
+
+        <!-- eTicket input -->
         <input type="number" value="" id="eTicket" placeholder="20">
         <br/>
         <br/>
-        <input type="text" value="" id="creditCard" placeholder="0000-0000-0000-0000">
-        <br/>
-        <br/>
+        <!-- END OF: eTicket input -->
+
+            <!-- creditCard input  -->
+            <input type="text" value="" id="creditCard" placeholder="0000-0000-0000-0000">
+            <br/>
+            <br/>
+            <!-- END OF: creditCard input -->
+
+        <!-- email input -->
         <input type="text" value="" id="email" placeholder="johnmay@gmail.com">
         <br/>
         <br/>
-        <input type="submit" value="Purchase" id="submitBtn">
-        <br/>
-        <br/>
+        <!-- END OF: email input -->
+
+            <!-- submit button input -->
+            <input type="submit" value="Purchase" id="submitBtn">
+            <br/>
+            <br/>
+            <!-- END OF: submit button input -->
+
+            <p><span id="message"></span></p>
+
+        <!-- reset button input -->
         <input type="reset" value="Reset" id="reset">
+        <!-- END OF: reset button input -->
 
         
     </form>
+
     <script src="scripts/activities.js"></script>
 </body>
 </html>
