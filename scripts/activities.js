@@ -135,6 +135,7 @@ window.onload = function categories() {
             price: 0.0,
         },
     ];
+
     // End activities array
 
 
