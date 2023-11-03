@@ -7,6 +7,12 @@ const emailEl = document.getElementById("email");
 const submitBtnEl = document.getElementById("submitBtn");
 const resetEl = document.getElementById("reset");
 const formEl = document.getElementById("form-choose");
+const formIfPriceEl = document.getElementById("formIfPrice");
+const descriptionEl = document.getElementById("description");
+const messageEl = document.getElementById("message");
+
+
+
 
 window.onload = function categories() {
     // initializing both category / activity drop down list
@@ -150,8 +156,12 @@ window.onload = function categories() {
 
     // FUNCTION onchange for activies select element
     categoryEl.onchange = function () {
+        messageEl.innerHTML = "";
+        descriptionEl.innerHTML = "";
         // value of category select element
         const selectedCategory = categoryEl.value;
+        
+        // const selectedActivity1 = activityEl.options[activityEl.selectedIndex].text;
         // Clears existing options
         activityEl.length = 0;
         // auto populates activities select element with "Select One"
@@ -161,28 +171,67 @@ window.onload = function categories() {
             const activity = activities[i];
             // if the categories are === then populate activity select element with name of same category activies
             if (activity.category === selectedCategory) {
-                const optionEl2 = new Option(activity.name, activity.price);
+                const optionEl2 = new Option(activity.name, activity.id);
                 // appends value of optionEl2 to select element
                 activityEl.appendChild(optionEl2);
-            }
-        }
-        // End ACTIVITY: FOR LOOP
-    };
 
+                
+            }
+            // if(totalPrice > 0){
+            //     formIfPriceEl.style.display = "block"
+            // } else {
+            //     formIfPriceEl.style.display = "none";
+            // }
+        }
+    };
+    let selectedActivityPrice = 0;
+
+        activityEl.onchange = function() {
+            messageEl.innerHTML = "";
+            const selectedActivityId = activityEl.value;
+            let theSelectedActivity = null;
+                for (let i = 0; i < activities.length; i++){
+                    if(activities[i].id === selectedActivityId){
+                        theSelectedActivity = activities[i];
+                        selectedActivityPrice = activities[i].price;
+                        break;
+                    }
+                }
+                if(theSelectedActivity){
+                    let descriptionText = `${theSelectedActivity.description}`;
+                    descriptionEl.innerHTML = descriptionText;
+                } else {
+                    descriptionEl.innerHTML = "";
+                };
+                resetEl.onclick = function () {
+                    descriptionEl.innerHTML = "";
+                };
+            };
+        
+        
+        
+        
+        
+        
+        // End ACTIVITY: FOR LOOP
+    
+    
     // onsubmit form function  
     formEl.onsubmit = function () {
         // initializing needed variables
         const selectedActivity = activityEl.options[activityEl.selectedIndex].text;
-        const selectedActivityPrice = parseFloat(activityEl.value);
         const eTicketCount = parseInt(eTicketEl.value);
+        const totalPrice = selectedActivityPrice * eTicketCount;
+        
+        // const selectedActivity = activityEl.options[activityEl.selectedIndex].text;
         const creditCard = creditCardEl.value;
         const email = emailEl.value;
-        const messageEl = document.getElementById("message");
+        
 
         // if true 
         if (eTicketCount && selectedActivityPrice && creditCard && email) {
             // get total price
-            const totalPrice = selectedActivityPrice * eTicketCount;
+            
             // if 2+ etickets then: "ticket(S)" plural
             if (eTicketCount > 1) {
                 messageEl.innerHTML = `Your credit card has been charged $${totalPrice.toFixed(
@@ -204,3 +253,11 @@ window.onload = function categories() {
         return false;
     };
 };
+
+// if(totalPrice > 0){
+                    
+// } else {
+//     formIfPriceEl.hidden = true;
+// }
+
+// id.toggle.class <-- for d-none selector for bootstrap
