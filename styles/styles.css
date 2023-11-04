@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    background-size: cover;
+    
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.bg-image {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/planetGlorb.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 55vh;
+}
+
+.bg-image > h3 {
+    padding-top: 200px;
+    font-size: 7rem;
+}
+
+.bg-image2{
+    background-image: url(../images/oldPlanetGlorb.png);
+    background-size: contain;
+    background-repeat: repeat;
+    min-height: 25vh;
+}
+
+.bg-image3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/glorbMountainRange.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+}
+
+.bg-image4{
+    background-image: url(../images/planetGlorb2.png);
+    background-size: contain;
+    background-repeat: repeat;
+    min-height: 25vh;
+}
+
+.bg-image5{
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(../images/glorbRiverTrail.png);
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-repeat: repeat;
+    min-height: 25vh;
+}
+
+.purple{
+    background-color: #6610f2;
+}
+
+.navbar-toggler {
+    color: white; /* This sets the color of the icon */
+    border-color: rgba(255,255,255,0.5); /* This sets the border color if there is one */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* If you are using Bootstrap 5 and want to change the color of the hamburger icon */
+  .navbar-light .navbar-toggler-icon {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
