@@ -198,8 +198,10 @@ window.onload = function categories() {
                     }
                 }
                 if(theSelectedActivity){
-                    let descriptionText = `${theSelectedActivity.description}`;
-                    descriptionEl.innerHTML = descriptionText;
+                    descriptionEl.innerHTML = `${theSelectedActivity.description}`;
+                    if(selectedActivityPrice > 0){
+                        formIfPriceEl.classList.toggle("d-none");
+                    }
                 } else {
                     descriptionEl.innerHTML = "";
                 };
@@ -223,6 +225,8 @@ window.onload = function categories() {
         const eTicketCount = parseInt(eTicketEl.value);
         const totalPrice = selectedActivityPrice * eTicketCount;
         
+        
+
         // const selectedActivity = activityEl.options[activityEl.selectedIndex].text;
         const creditCard = creditCardEl.value;
         const email = emailEl.value;
