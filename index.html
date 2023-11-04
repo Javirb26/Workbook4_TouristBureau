@@ -9,88 +9,179 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Tourist Bureau Form</title>
   </head>
   <body>
-    <main>
-      <div>
-        <form id="form-choose">
-          <div class="mb-3">
-            <!-- select elements -->
-
-            <!-- categories select element -->
-            <select name="" id="categories" value="">
-              <!-- default option: select one -->
-              <option value="select-one" id="defaultOne">Select One</option>
-              <!-- END OF: default option: select one -->
-            </select>
-            <br />
-            <br />
-            <!-- END OF: categories select element -->
-
-            <!-- activities select element -->
-            <select name="" id="activities" value="">
-              <!-- default option: select one -->
-              <option value="select-one" id="defaultTwo">Select One</option>
-              <!-- END OF: default option: select one -->
-            </select>
-            <br />
-            <br />
-            <!-- description for activity -->
-            <p><span id="description"></span></p>
-            <!-- END OF: activities select element -->
-            <!-- END OF: select elements -->
-
-            <div class="formIfPrice">
-              <!-- eTicket input -->
-              <input type="number" value="" id="eTicket" placeholder="20" />
-              <br />
-              <br />
-              <!-- END OF: eTicket input -->
-
-              <!-- creditCard input  -->
-              <input
-                type="text"
-                value=""
-                id="creditCard"
-                placeholder="0000-0000-0000-0000"
-              />
-              <br />
-              <br />
-              <!-- END OF: creditCard input -->
-
-              <!-- email input -->
-              <input
-                type="text"
-                value=""
-                id="email"
-                placeholder="johnmay@gmail.com"
-              />
-              <br />
-              <br />
-              <!-- END OF: email input -->
-            </div>
-            <!-- submit button input -->
-            <input type="submit" value="Purchase" id="submitBtn" />
-            <br />
-            <br />
-            <!-- END OF: submit button input -->
-
-            <p><span id="message"></span></p>
-
-            <!-- reset button input -->
-            <input type="reset" value="Reset" id="reset" />
-            <!-- END OF: reset button input -->
-          </div>
-        </form>
+    <nav class="navbar navbar-expand-lg py-3 purple">
+      <div class="container">
+        <a class="navbar-brand text-white">navbar</a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-white" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white active fw-bold" href="index.html">Form</a></li>
+          </ul>
+        </div>
+        
       </div>
+    </nav>
+    <main >
+
+      <div class="bg-image3">
+        
+      
+      <div class="container mt-5 mb-5">
+
+        <div class="row justify-content-center">
+
+          <div class="col-md-6 bg-body-secondary rounded-3">
+
+            <h3 class="text-center mt-4">Form</h3>
+
+            <form id="form-choose" class="">
+
+              <div class="form-group mb-3 mt-3 px-5">
+                <!-- select elements -->
+    
+                <div class="text-center">
+                  <!-- categories select element -->
+                  <select
+                    class="text-center form-control"
+                    name=""
+                    id="categories"
+                    value=""
+                  >
+                    <!-- default option: select one -->
+                    <option value="select-one" id="defaultOne">Select One</option>
+                    <!-- END OF: default option: select one -->
+                  </select>
+                  
+                  <!-- END OF: categories select element -->
+                </div>
+    
+                <div class="text-center">
+                  <!-- activities select element -->
+                  <select
+                    class="text-center my-2 form-control"
+                    name=""
+                    id="activities"
+                    value=""
+                  >
+                    <!-- default option: select one -->
+                    <option value="select-one" id="defaultTwo">Select One</option>
+                    <!-- END OF: default option: select one -->
+                  </select>
+                  
+                  <!-- description for activity -->
+                </div>
+    
+                <div class="text-center">
+                  <p><span class="fs-4" id="description"></span></p>
+                </div>
+    
+                <!-- END OF: activities select element -->
+                <!-- END OF: select elements -->
+    
+                <div id="formIfPrice" class="d-none">
+                  <div class="text-center">
+                    <!-- eTicket input -->
+                    <input
+                      class="form-control my-4"
+                      type="number"
+                      value=""
+                      id="eTicket"
+                      placeholder="20"
+                    />
+                    
+                    <!-- END OF: eTicket input -->
+                  </div>
+    
+                  <div class="">
+                    <!-- creditCard input  -->
+                    <input
+                      class="form-control my-4"
+                      type="text"
+                      value=""
+                      id="creditCard"
+                      placeholder="0000-0000-0000-0000"
+                    />
+                    
+                    <!-- END OF: creditCard input -->
+                  </div>
+    
+                  <div class="text-center">
+                    <!-- email input -->
+                    <input
+                      class="form-control my-4"
+                      type="text"
+                      value=""
+                      id="email"
+                      placeholder="johnmay@gmail.com"
+                    />
+                    
+                    <!-- END OF: email input -->
+                  </div>
+                </div>
+    
+                <div class="text-center mt-3">
+                  <!-- submit button input -->
+                  <input
+                    class="btn btn-primary"
+                    type="submit"
+                    value="Purchase"
+                    id="submitBtn"
+                  />
+                  
+                  <!-- END OF: submit button input -->
+                </div>
+    
+                <div class="text-center my-4">
+                  <p><span class="fs-4" id="message"></span></p>
+                </div>
+    
+                <div class="d-flex justify-content-center">
+                  <!-- reset button input -->
+                  <input
+                    class="btn btn-danger px-4"
+                    type="reset"
+                    value="Reset"
+                    id="reset"
+                  />
+                 
+                  <!-- END OF: reset button input -->
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-dark pt-3">
+      <p class="text-white text-center fs-4">enjoy the day with one of Glorbazorbs' many activities!</p>
+    </div>
+
+    <div class="bg-image5"></div>
+      
     </main>
 
-    <script src="scripts/activities.js"></script>
-    <script
+      <footer class="py-3 purple">
+        <div class="container text-center">
+          <p class="display-5 mb-3 text-white">Glorbazaorb</p>
+          <small class="text-white">created by: <a href="#" class="text-white">The Glorbazorb Team</a></small>
+        </div>
+      </footer>
+    
+      <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/activities.js"></script>
+    
   </body>
 </html>
+
